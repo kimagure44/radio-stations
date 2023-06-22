@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --white-1: #f3f2f2;
+  --red: #ff0000;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--white-1);
+  font-family: 'Josefin Sans', sans-serif;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.loading .background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: var(--black);
+  opacity: .8;
+}
+.loading .text {
+  display: flex;
+  color: var(--white);
+  position: absolute;
+  top: 50%;
+  font-size: 3em;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 20;
+}
+.hide {
+  display: none;
+}
+.radio-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+}
+.radio-container .player {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 280px;
+  width: 100%;
+  height: 450px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: var(--white-1);;
+  box-shadow: 5px 5px 10px 2px rgba(0,0,200,.15), -5px -5px 10px 2px rgba(255,255,255, 1);
+}
+.radio-container .player button {
+  border: 0;
+  background-color: var(--white-1);;
+  box-shadow: 5px 5px 10px 2px rgba(0,0,200,.15), -5px -5px 10px 2px rgba(255,255,255, 1);
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  margin: 5px;
+  transition: 500ms ease;
+  color: var(--black);
+  cursor: pointer;
+}
+.radio-container .player button:hover {
+  background: #4095ef !important;
+  transition: 500ms ease;
+  color: var(--white);
+  transform: scale(1.1);
+}
+.radio-container .player .radio-name,
+.radio-container .player .title {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+.radio-container .player .cover {
+  height: 230px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.radio-container .player .cover i {
+  color: var(--red);
+  animation: latidos 3s infinite;
+  text-shadow: 1px 1px 3px rgba(0,0,0,.4);
+}
+.radio-container .player .cover .votes {
+  z-index: 1;
+  font-weight: bold;
+  position: relative;
+  top: 23px;
+  color: var(--white);
+  font-size: 1.8em;
+}
+.radio-container .player .button-controls {
+  height: 130px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+@keyframes latidos {
+  from { transform: scale(4);  }
+  50% { transform: scale(9); }
+  to { transform: scale(4); }
+}

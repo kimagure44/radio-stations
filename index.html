@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radio Online</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="radio-container">
+    <div class="player">
+      <div class="radio-name"></div>
+      <div class="cover">
+        <div class="votes"></div>
+        <i class="fa-solid fa-heart"></i>
+      </div>
+      <div class="title">Song</div>
+      <div class="button-controls">
+        <button id="btnPrev"><i class="fa-solid fa-backward"></i></button>
+        <button id="btnPause"><i class="fa-solid fa-pause"></i></button>
+        <button id="btnPlay"><i class="fa-solid fa-play"></i></button>
+        <button id="btnNext"><i class="fa-solid fa-forward"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="loading">
+    <div class="text">Loading Radio Stations....</div>
+    <div class="background"></div>
+  </div>
+  <audio id="audio"></audio>
+  <script src="./index.js"></script>
+</body>
+
+</html>
